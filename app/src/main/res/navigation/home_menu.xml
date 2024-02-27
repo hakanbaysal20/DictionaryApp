@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_menu"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hakanbaysal20.dictionaryapp.ui.fragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/pushDetailPage"
+            app:destination="@id/wordDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordDetailFragment"
+        android:name="com.hakanbaysal20.dictionaryapp.ui.fragment.WordDetailFragment"
+        android:label="WordDetailFragment" >
+        <argument
+            android:name="word"
+            app:argType="com.hakanbaysal20.dictionaryapp.data.entity.WordModel" />
+    </fragment>
+</navigation>
